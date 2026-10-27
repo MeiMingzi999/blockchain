@@ -11,7 +11,7 @@ import (
 type user struct {
 	ID         uint
 	Name       string
-	Post       []post `gorm:"foreignKey:UserID"`
+	Post       []post `gorm:"foreignKey:UserId"`
 	UpdateTime time.Time
 	CreateTime time.Time
 }
@@ -20,7 +20,7 @@ type post struct {
 	ID         uint
 	UserId     uint
 	Context    string
-	Comment    []comment `gorm:"foreignKey:PostID"`
+	Comment    []comment `gorm:"foreignKey:PostId"`
 	UpdateTime time.Time
 	CreateTime time.Time
 }
